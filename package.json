@@ -1,0 +1,29 @@
+{
+  "name": "hands-on-node",
+  "version": "1.0.0",
+  "description": "Exercises for working with the MarkLogic Node.js Client API",
+  "main": "index.js",
+  "dependencies": {
+    "marklogic": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmcassel/hands-on-node"
+  },
+  "keywords": [
+    "MarkLogic",
+    "Node",
+    "JavaScript",
+    "js"
+  ],
+  "author": "Dave Cassel <dmcassel@gmail.com> (http://davidcassel.net/)",
+  "license": "AFL-2.0",
+  "bugs": {
+    "url": "https://github.com/dmcassel/hands-on-node/issues"
+  },
+  "homepage": "https://github.com/dmcassel/hands-on-node"
+}
