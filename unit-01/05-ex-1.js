@@ -1,5 +1,5 @@
 var ml = require('marklogic');
-var conn = require('./config.js').connection;
+var conn = require('../config.js').connection;
 var db = ml.createDatabaseClient(conn);
 
 // Task: Print the city where image 03.JPG was taken.

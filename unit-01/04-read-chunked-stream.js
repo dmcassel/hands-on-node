@@ -4,7 +4,7 @@
 // not the only way to do so.
 
 var ml = require('marklogic');
-var conn = require('./config.js').connection;
+var conn = require('../config.js').connection;
 var db = ml.createDatabaseClient(conn);
 
 // document URI in the database
