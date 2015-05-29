@@ -1,0 +1,17 @@
+{
+  "originalFilename": "../data/photos/20140721_144421b.jpg",
+  "filename": "20140721_144421b.jpg",
+  "binary": "/binary/20140721_144421b.jpg",
+  "make": "SAMSUNG",
+  "model": "SAMSUNG-SM-G900A",
+  "created": 1405968260000,
+  "location": {
+    "type": "Point",
+    "coordinates": [
+      43.6231,
+      -70.208058
+    ],
+    "city": "Cape Elizabeth",
+    "country": "United States"
+  }
+}
