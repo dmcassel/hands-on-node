@@ -4,7 +4,9 @@
   "description": "Exercises for working with the MarkLogic Node.js Client API",
   "main": "index.js",
   "dependencies": {
-    "marklogic": "^1.0.2"
+    "bluebird": "^2.9.27",
+    "marklogic": "^1.0.2",
+    "request": "^2.57.0"
   },
   "devDependencies": {},
   "scripts": {
