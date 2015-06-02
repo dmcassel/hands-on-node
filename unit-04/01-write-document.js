@@ -13,13 +13,13 @@ db.documents.write(
   {
     uri: '/image/20140721_144421b.jpg.json',
     contentType: 'application/json',
-    content: JSON.parse(fs.readFileSync('20140721_144421b.jpg.json')),
+    content: JSON.parse(fs.readFileSync('../data/20140721_144421b.jpg.json')),
     collections: ['image']
   },
   {
     uri: '/binary/20140721_144421b.jpg',
     contentType: 'image/jpeg',
-    content: fs.readFileSync('20140721_144421b.jpg'),
+    content: fs.readFileSync('../data/20140721_144421b.jpg'),
     collections: ['binary']
   }
 ).result()
