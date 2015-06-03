@@ -6,7 +6,7 @@
 // See http://docs.marklogic.com/guide/node-dev/partial-update for details.
 
 var ml = require('marklogic');
-var conn = require('../config.js').connection;
+var conn = require('../config.js').admin;
 var db = ml.createDatabaseClient(conn);
 var pb = ml.patchBuilder;
 

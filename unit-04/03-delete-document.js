@@ -4,7 +4,7 @@
 // See http://docs.marklogic.com/guide/node-dev/documents#id_30566 for details.
 
 var ml = require('marklogic');
-var conn = require('../config.js').connection;
+var conn = require('../config.js').admin;
 var db = ml.createDatabaseClient(conn);
 
 db.documents.remove(

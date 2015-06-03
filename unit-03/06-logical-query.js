@@ -4,7 +4,7 @@
 // The difference between this one and 03-string-query.js is the use of qb.or().
 
 var ml = require('marklogic');
-var conn = require('../config.js').connection;
+var conn = require('../config.js').admin;
 var db = ml.createDatabaseClient(conn);
 var qb = ml.queryBuilder;
 

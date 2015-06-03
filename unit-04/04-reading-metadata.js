@@ -3,7 +3,7 @@
 // Rerun 01-write-document.js if you have run 03-delete-document
 
 var ml = require('marklogic');
-var conn = require('../config.js').connection;
+var conn = require('../config.js').admin;
 var db = ml.createDatabaseClient(conn);
 
 db.documents.read(

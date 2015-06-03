@@ -2,7 +2,7 @@
 // Handle the response using the Callback approach.
 
 var ml = require('marklogic');
-var conn = require('../config.js').connection;
+var conn = require('../config.js').admin;
 var db = ml.createDatabaseClient(conn);
 
 // document URI in the database

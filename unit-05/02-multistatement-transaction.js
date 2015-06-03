@@ -1,7 +1,7 @@
 // Do multiple calls to MarkLogic using the same transaction.
 
 var ml = require('marklogic');
-var conn = require('../config.js').connection;
+var conn = require('../config.js').admin;
 var db = ml.createDatabaseClient(conn);
 var pb = ml.patchBuilder;
 var qb = ml.queryBuilder;

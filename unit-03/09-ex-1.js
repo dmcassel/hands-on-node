@@ -2,7 +2,7 @@
 // Hint: you'll look in the "make" and "country" JSON properties.
 
 var ml = require('marklogic');
-var conn = require('../config.js').connection;
+var conn = require('../config.js').admin;
 var db = ml.createDatabaseClient(conn);
 var qb = ml.queryBuilder;
 

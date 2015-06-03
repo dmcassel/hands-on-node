@@ -4,7 +4,7 @@
 // 'san francisco' -- note the extra layer of quotes.
 
 var ml = require('marklogic');
-var conn = require('../config.js').connection;
+var conn = require('../config.js').admin;
 var db = ml.createDatabaseClient(conn);
 var qb = ml.queryBuilder;
 
