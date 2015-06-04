@@ -1,0 +1,6 @@
+{
+  "user-name": "hon-admin",
+  "password": "adminPass",
+  "description": "A user who can administer through the Node API",
+  "role": ["rest-admin"]
+}

@@ -1,0 +1,6 @@
+{
+  "user-name": "hon-writer",
+  "password": "writerPass",
+  "description": "A user who can write through the Node API",
+  "role": ["rest-writer"]
+}
