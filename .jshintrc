@@ -6,7 +6,8 @@
   "globals": {
     "angular": false,
     "google": false,
-    "$": false
+    "$": false,
+    "xdmp": true
   },
   "immed": true,
   "indent": 2,
