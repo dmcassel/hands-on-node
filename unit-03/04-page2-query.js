@@ -11,7 +11,7 @@ db.documents.query(
     qb.term('apple')
   )
   // choose which results to get
-  .slice(6, 10)
+  .slice(6, 5)
   .withOptions({metrics: true})
 ).result()
 .then(function(docs) {
