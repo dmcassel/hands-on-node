@@ -47,7 +47,7 @@ function readDocument() {
 }
 
 function printDocument(docs) {
-  console.log(docs);
+  console.log(JSON.stringify(docs));
 }
 
 uploadDocs()
