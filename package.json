@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "bluebird": "^2.9.27",
-    "marklogic": "^1.0.2",
+    "marklogic": "^1.0.3",
     "request": "^2.57.0"
   },
   "devDependencies": {},
