@@ -1,4 +1,6 @@
-// Read a document from the database.
+// Read a document from the database. Apply the add-image-size tranform during
+// the document read. This will supplement the document contents with
+// additional data.
 // Handle the response using the Promise approach.
 
 var ml = require('marklogic');
