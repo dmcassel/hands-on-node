@@ -7,3 +7,14 @@ var db = ml.createDatabaseClient(conn);
 // URI: /image/03.JPG.json
 // JSON path within document: location.city
 
+// document URI in the database
+var imgURI = '/image/03.JPG.json';
+
+db.documents.read(imgURI).result()
+  .then(function(docs) {
+    // write out the document
+    console.log(docs[0].content.location.city);
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
