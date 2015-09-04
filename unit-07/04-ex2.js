@@ -6,13 +6,13 @@ var conn = require('../config.js').restAdmin;
 var db = marklogic.createDatabaseClient(conn);
 
 db.config.transforms.write({
-  name: 'FILL IN NAME',
+  name: 'add-image-sizes',
   format: 'javascript',
-  source: fs.createReadStream('./FILL IN FILE NAME'),
+  source: fs.createReadStream('./03-ex1.sjs'),
   // everything below this is optional metadata
-  title: 'TITLE',
-  description: 'DESCRIPTION',
-  provider: 'PROVIDER',
+  title: 'Add Image Sizes',
+  description: 'Adds the binary image size to each search result',
+  provider: 'Dave',
   version: 1.0
 }).result()
 .then(function(response) {
