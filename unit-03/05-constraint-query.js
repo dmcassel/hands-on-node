@@ -9,9 +9,9 @@ var qb = ml.queryBuilder;
 db.documents.query(
   qb.where(
     qb.parsedFrom(
-      'city:Atlanta',
+      'c:Atlanta',
       qb.parseBindings(
-        qb.value('city', qb.bind('city'))
+        qb.value('city', qb.bind('c'))
       ))
   )
   .withOptions({metrics: true})
