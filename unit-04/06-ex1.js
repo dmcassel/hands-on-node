@@ -28,3 +28,33 @@
 var ml = require('marklogic');
 var conn = require('../config.js').admin;
 var db = ml.createDatabaseClient(conn);
+var pb = ml.patchBuilder;
+var imgURI = '/image/20140721_144421b.jpg.json';
+
+db.documents.patch(
+  imgURI,
+  pb.insert(
+    '/location',
+    'after',
+    {title: 'Portland Head Lighthouse'}
+  )
+).result()
+  .then(function(){
+    console.log('Title added');
+
+
+	db.documents.read(imgURI).result()
+  	.then(function(docs) {
+    	// write out the document
+    	console.log(docs[0].content);
+  	})
+  	.catch(function(error) {
+    	console.log("Error reading document: " + error);
+  	});
+
+
+
+  })
+  .catch(function(error) {
+    console.log('Problem adding title: ' + error);
+  });

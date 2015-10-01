@@ -27,5 +27,31 @@
 var ml = require('marklogic');
 var conn = require('../config.js').admin;
 var db = ml.createDatabaseClient(conn);
+var pb = ml.patchBuilder;
+var imgURI = '/image/20140721_144421b.jpg.json';
+
+db.documents.patch(
+  imgURI,
+  pb.replace(
+    '/model',
+    'Galaxy S5'
+  )
+).result()
+  .then(function(){
+    console.log('Camera updated');
+
+    // print the document to see the results
+	db.documents.read(imgURI).result()
+  	.then(function(docs) {
+    	// write out the document
+    	console.log(docs[0].content);
+  	})
+  	.catch(function(error) {
+    	console.log("Error reading document: " + error);
+  	});
 
 
+  })
+  .catch(function(error) {
+    console.log('Problem updating camera: ' + error);
+  });
