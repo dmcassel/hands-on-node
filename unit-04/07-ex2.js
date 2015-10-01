@@ -41,16 +41,11 @@ db.documents.patch(
     console.log('Camera updated');
 
     // print the document to see the results
-	db.documents.read(imgURI).result()
-  	.then(function(docs) {
-    	// write out the document
-    	console.log(docs[0].content);
-  	})
-  	.catch(function(error) {
-    	console.log("Error reading document: " + error);
-  	});
-
-
+    return db.documents.read(imgURI).result();
+  })
+  .then(function(docs) {
+    // write out the document
+    console.log(docs[0].content);
   })
   .catch(function(error) {
     console.log('Problem updating camera: ' + error);

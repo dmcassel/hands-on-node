@@ -42,18 +42,11 @@ db.documents.patch(
   .then(function(){
     console.log('Title added');
 
-
-	db.documents.read(imgURI).result()
-  	.then(function(docs) {
-    	// write out the document
-    	console.log(docs[0].content);
-  	})
-  	.catch(function(error) {
-    	console.log("Error reading document: " + error);
-  	});
-
-
-
+    return db.documents.read(imgURI).result();
+  })
+  .then(function(docs) {
+    // write out the document
+    console.log(docs[0].content);
   })
   .catch(function(error) {
     console.log('Problem adding title: ' + error);
