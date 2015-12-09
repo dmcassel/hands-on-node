@@ -1,3 +1,5 @@
+# Search
+
 Unit 3 introduces search. MarkLogic provides a variety of ways to search 
 content. 
 
@@ -9,3 +11,8 @@ content.
 - Directories
 - Values
 - Suggestions
+
+## Additional Resources
+
+- Guide: [Querying Documents and Metadata](http://docs.marklogic.com/guide/node-dev/search)
+- API Documentation: [QueryBuilder]](http://docs.marklogic.com/jsdoc/queryBuilder.html)

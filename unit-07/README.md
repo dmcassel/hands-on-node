@@ -1,3 +1,5 @@
+# Transformations
+
 Unit 07 introduces transformations. You can apply transforms to documents 
 during read, during write, to search results, and to value results.
 
@@ -9,3 +11,8 @@ adding the size of the binary associated with the JSON data.
 
 The exercises challenge you to apply these techiques to write a search
 transform, deploy it, and make use of it during a search.
+
+## Additional Resources
+
+- Guide: [Working with Content Transformations](http://docs.marklogic.com/guide/node-dev/extensions#id_78179)
+- Guide: [Error Reporting in Extensions and Transformations](http://docs.marklogic.com/guide/node-dev/extensions#id_19650)
