@@ -22,11 +22,14 @@ here will give you a taste of how the Node Client API works. Note that it is
 intended to get you started and show the power of the API, but it is not a full
 replacement for MarkLogic University's class on the subject.
 
-## GeoPhoto
+## Geophoto
 
 This session is based on the [Geophoto application][geophoto]. Once you've
 cloned and set up the application and imported the data, start the application
 (see Geophoto's README for instructions).
+
+See MarkLogic University's [Using Node.js: The Geophoto App][mlu-geophoto] On 
+Demand video for an overview of the Geophoto application. 
 
 ### Features
 
@@ -55,4 +58,11 @@ Trace the steps of editing the title of an image.
 - POST /api/image/update/:id/:update
 - routes.js: update -> apiupdate -> updateDocument (read, edit, write)
 
+## Additional Resources
+
+- MarkLogic University has an instructor-led course on [using MarkLogic with the
+Node.js Client API][mlu-ilt-node]
+
 [geophoto]: https://github.com/marklogic/Geophoto
+[mlu-geophoto]: http://mlu.marklogic.com/ondemand/aa767d01
+[mlu-ilt-node]: http://www.marklogic.com/training-courses/developing-marklogic-applications-i-node-js/
