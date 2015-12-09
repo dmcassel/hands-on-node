@@ -15,54 +15,55 @@ var binaryURI = null;
 var updatedBinaryURI = null;
 
 // Create a transaction
-db.transactions.open(true).result().then(function(txResponse) {
-  // Search for all the JSON image descriptions
-  db.documents.read(jsonURI).result()
-    .then(function(doc) {
-      // patch the JSON document
-      binaryURI = doc[0].content.binary;
-      updatedBinaryURI = binaryURI.toLowerCase();
+db.transactions.open(true).result()
+  .then(function(txResponse) {
+    // Search for all the JSON image descriptions
+    db.documents.read(jsonURI).result()
+      .then(function(doc) {
+        // patch the JSON document
+        binaryURI = doc[0].content.binary;
+        updatedBinaryURI = binaryURI.toLowerCase();
 
-      console.log('patching ' + jsonURI);
-      return db.documents.patch({
-        uri: jsonURI,
-        operations: pb.replace('/binary', updatedBinaryURI),
-        txid: txResponse
-      }).result();
-    })
-    .then(function() {
-      // get the binary image
-      console.log('retrieving ' + binaryURI);
-      return db.documents.read({uris: binaryURI, categories: ['content', 'collections']}).result();
-    })
-    .then(function(doc) {
-      // Insert the binary image at its new URI
-      console.log('inserting image at ' + updatedBinaryURI);
+        console.log('patching ' + jsonURI);
+        return db.documents.patch({
+          uri: jsonURI,
+          operations: pb.replace('/binary', updatedBinaryURI),
+          txid: txResponse
+        }).result();
+      })
+      .then(function() {
+        // get the binary image
+        console.log('retrieving ' + binaryURI);
+        return db.documents.read({uris: binaryURI, categories: ['content', 'collections']}).result();
+      })
+      .then(function(doc) {
+        // Insert the binary image at its new URI
+        console.log('inserting image at ' + updatedBinaryURI);
 
-      return db.documents.write({
-        documents: {
-          uri: updatedBinaryURI,
-          contentType: doc[0].contentType,
-          collections: doc[0].collections,
-          content: doc[0].content
-        },
-        txid: txResponse
-      }).result();
+        return db.documents.write({
+          documents: {
+            uri: updatedBinaryURI,
+            contentType: doc[0].contentType,
+            collections: doc[0].collections,
+            content: doc[0].content
+          },
+          txid: txResponse
+        }).result();
 
-    })
-    .then(function() {
-      // Remove the original binary image
-      console.log('removing image from ' + binaryURI);
-      db.documents.remove({ uris: binaryURI, txid: txResponse}).result();
-    })
-    .then(function() {
-      // We've gotten this far, so everything worked. Commit.
-      console.log('done... commit!');
-      db.transactions.commit(txResponse);
-    })
-    .catch(function(error) {
-      // Something went wrong. Roll back the transaction.
-      console.log('Problem: ' + error);
-      db.transactions.rollback(txResponse);
-    });
+      })
+      .then(function() {
+        // Remove the original binary image
+        console.log('removing image from ' + binaryURI);
+        db.documents.remove({ uris: binaryURI, txid: txResponse}).result();
+      })
+      .then(function() {
+        // We've gotten this far, so everything worked. Commit.
+        console.log('done... commit!');
+        db.transactions.commit(txResponse);
+      })
+      .catch(function(error) {
+        // Something went wrong. Roll back the transaction.
+        console.log('Problem: ' + error);
+        db.transactions.rollback(txResponse);
+      });
   });
