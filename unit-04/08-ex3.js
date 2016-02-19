@@ -8,3 +8,30 @@ var ml = require('marklogic');
 var conn = require('../config.js').admin;
 var db = ml.createDatabaseClient(conn);
 var pb = ml.patchBuilder;
+
+var imageURI = '/image/20140721_144421b.jpg.json';
+
+db.documents.patch(
+  {
+    uri: imageURI,
+    categories: ['metadata'],
+    operations: [
+      pb.collections.remove('phone')
+    ]
+  })
+.result()
+  .then(function(response) {
+
+    return db.documents.read(
+      {
+        uris: [imageURI],
+        categories: ['metadata']
+      }
+    ).result();
+  })
+  .then(function(metadata) {
+    console.log('Document metadata: ' + JSON.stringify(metadata));
+  })
+  .catch(function(error) {
+    console.log('Failed to delete document: ' + error);
+  });
