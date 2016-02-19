@@ -28,7 +28,11 @@ function updateJSONdoc(binaryURI, updatedBinaryURI, transactionID) {
 function getBinaryImage(binaryURI, transactionID) {
   // get the binary image
   console.log('retrieving ' + binaryURI);
-  return db.documents.read({uris: binaryURI, categories: ['content', 'collections']}).result();
+  return db.documents.read({
+    uris: binaryURI,
+    categories: ['content', 'collections'],
+    txid: transactionID
+  }).result();
 }
 
 function insertBinary(binaryDocDesc, updatedBinaryURI, transactionID) {
