@@ -15,7 +15,7 @@ db.documents.patch(
     uri: '/image/20140721_144421b.jpg.json',
     categories: ['metadata'],
     operations: [
-      pb.insert('/array-node("collections")', 'last-child', 'phone')
+      pb.collections.add('phone')
     ]
   })
 .result()
