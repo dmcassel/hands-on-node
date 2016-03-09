@@ -32,6 +32,6 @@ request('http://localhost:8002/manage/v2/users?format=json',
     if (!error && response.statusCode < 300) {
       console.log('Success: ' + JSON.stringify(response));
     } else {
-      console.log('That didn\'t work: ' + response.statusCode + '; ' + body);
+      console.log('That didn\'t work: ' + response.statusCode + '; ' + JSON.stringify(body));
     }
   });
