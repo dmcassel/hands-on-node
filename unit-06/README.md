@@ -1,6 +1,6 @@
 # Transformations
 
-Unit 07 introduces transformations. You can apply transforms to documents 
+Unit 6 introduces transformations. You can apply transforms to documents 
 during read, during write, to search results, and to value results.
 
 01-install-add-image-size.js illustrates how to deploy a transform. In this

@@ -1,6 +1,6 @@
 # Search
 
-Unit 3 introduces search. MarkLogic provides a variety of ways to search 
+Unit 2 introduces search. MarkLogic provides a variety of ways to search 
 content. 
 
 - Text
