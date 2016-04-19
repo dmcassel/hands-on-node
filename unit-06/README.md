@@ -1,12 +1,18 @@
-# Security
+# Transformations
 
-Unit 6 show how different roles impact operations that we can do with the Node
-API. 
+Unit 6 introduces transformations. You can apply transforms to documents 
+during read, during write, to search results, and to value results.
 
-In this unit, we'll create four users and see how they are different from using
-the 'admin' user. In your applications, you'll want to set up roles that have
-the access needed, but not more. 
+01-install-add-image-size.js illustrates how to deploy a transform. In this
+case, it deploys the code in add-image-size.js.
+
+02-read-doc.js then applies the add-image-size while reading a single document,
+adding the size of the binary associated with the JSON data.
+
+The exercises challenge you to apply these techiques to write a search
+transform, deploy it, and make use of it during a search.
 
 ## Additional Resources
 
-- Guide: [Security Requirements](http://docs.marklogic.com/guide/node-dev/intro#id_70898)
+- Guide: [Working with Content Transformations](http://docs.marklogic.com/guide/node-dev/extensions#id_78179)
+- Guide: [Error Reporting in Extensions and Transformations](http://docs.marklogic.com/guide/node-dev/extensions#id_19650)

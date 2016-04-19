@@ -1,8 +1,12 @@
-# Transactions
+# Security
 
-This unit's goal is to give you practice with how transactions work with the Node API. 
+Unit 5 show how different roles impact operations that we can do with the Node
+API. 
+
+In this unit, we'll create four users and see how they are different from using
+the 'admin' user. In your applications, you'll want to set up roles that have
+the access needed, but not more. 
 
 ## Additional Resources
 
-- Guide: [Managing Transactions](http://docs.marklogic.com/guide/node-dev/transactions)
-- API Documentation: [transactions](http://docs.marklogic.com/jsdoc/transactions.html)
+- Guide: [Security Requirements](http://docs.marklogic.com/guide/node-dev/intro#id_70898)
