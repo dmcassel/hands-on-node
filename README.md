@@ -7,13 +7,6 @@ MarkLogic.
 
 Knowledge of JavaScript is assumed. 
 
-## Setup
-
-1. Install MarkLogic 8.
-2. Clone the [Geophoto repository][geophoto]. 
-3. Follow Geophoto's setup instructions, including data import.
-4. In this directory, run `npm install`. 
-
 ## Introduction
 
 MarkLogic is a document- and triple-store database. One of the features in
@@ -21,6 +14,19 @@ MarkLogic 8 is a client API for Node.js developers. The exercises presented
 here will give you a taste of how the Node Client API works. Note that it is
 intended to get you started and show the power of the API, but it is not a full
 replacement for MarkLogic University's class on the subject.
+
+## Setup
+
+1. [Download](http://developer.marklogic.com/products) and 
+[Install](http://docs.marklogic.com/guide/installation/procedures#id_28962) 
+MarkLogic 8.
+2. Clone the [Geophoto repository][geophoto]. 
+
+  1. cd to a directory where you want to project to be
+  2. `git clone https://github.com/marklogic/Geophoto`
+
+3. Follow [Geophoto's setup instructions](https://github.com/marklogic/Geophoto#get-started), including data import.
+4. In the hands-on-node directory, run `npm install`. 
 
 ## Geophoto
 
